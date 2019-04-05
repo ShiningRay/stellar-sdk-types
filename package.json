@@ -1,0 +1,50 @@
+{
+    "name": "@types/stellar-sdk",
+    "version": "0.11.2",
+    "description": "TypeScript definitions for stellar-sdk",
+    "license": "MIT",
+    "contributors": [{
+            "name": "Carl Foster",
+            "url": "https://github.com/carl-foster",
+            "githubUsername": "carl-foster"
+        },
+        {
+            "name": "Triston Jones",
+            "url": "https://github.com/tristonj",
+            "githubUsername": "tristonj"
+        },
+        {
+            "name": "Paul Selden",
+            "url": "https://github.com/pselden",
+            "githubUsername": "pselden"
+        },
+        {
+            "name": "Max Bause",
+            "url": "https://github.com/maxbause",
+            "githubUsername": "maxbause"
+        },
+        {
+            "name": "Timur Ramazanov",
+            "url": "https://github.com/charlie-wasp",
+            "githubUsername": "charlie-wasp"
+        },
+        {
+            "name": "Kalvis Kalniņš",
+            "url": "https://github.com/Akuukis",
+            "githubUsername": "Akuukis"
+        }
+    ],
+    "main": "",
+    "types": "index",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/node": "*",
+        "@types/stellar-base": "*"
+    },
+    "typesPublisherContentHash": "250530a7c76b690723c9f577d3fbca8f0bc0d52c51bd43cbb4e12af4d3f76cc5",
+    "typeScriptVersion": "2.9"
+}

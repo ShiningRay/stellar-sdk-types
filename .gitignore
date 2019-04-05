@@ -1,0 +1,14 @@
+.idea/
+.vscode/
+node_modules/
+/build/
+tmp/
+temp/
+*.db
+dist/
+*.log
+config.json
+.vs/
+*.jar
+.node-xmlhttprequest-*
+*.swp

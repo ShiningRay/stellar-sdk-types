@@ -1,0 +1,18 @@
+dependencies:
+  '@types/node': 11.13.0
+  '@types/stellar-base': 0.10.2
+lockfileVersion: 5
+packages:
+  /@types/node/11.13.0:
+    dev: false
+    resolution:
+      integrity: sha512-rx29MMkRdVmzunmiA4lzBYJNnXsW/PhG4kMBy2ATsYaDjGGR75dCFEVVROKpNwlVdcUX3xxlghKQOeDPBJobng==
+  /@types/stellar-base/0.10.2:
+    dependencies:
+      '@types/node': 11.13.0
+    dev: false
+    resolution:
+      integrity: sha512-MOilZXnnLqxCa3f2Xr7phqI8mbfz5j1BhWs6XrGwHfNTL9XQPOyLBN9tBWIsDIRZ1VyUZQ2YQLTjSppsB8/iUQ==
+specifiers:
+  '@types/node': '*'
+  '@types/stellar-base': '*'
