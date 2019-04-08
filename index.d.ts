@@ -96,7 +96,7 @@ export class Server {
     ): Server.TradeAggregationCallBuilder;
     trades(): Server.TradesCallBuilder;
     transactions(): Server.TransactionCallBuilder;
-
+    fetchBaseFee(): Promise<number>;
     serverURL: any;  // TODO: require("urijs")
 }
 
@@ -381,15 +381,22 @@ export namespace Server {
         forOperation(operationId: number): this;
         forTransaction(transactionId: string): this;
     }
-
-    abstract class LedgerCallBuilder extends CallBuilder<LedgerRecord> { }
+    interface SingleLedgerCallBuilder extends LedgerCallBuilder {
+        call(): Promise<LedgerRecord>;
+    }
+    abstract class LedgerCallBuilder extends CallBuilder<LedgerRecord> {
+        ledger(i: number): SingleLedgerCallBuilder;
+    }
 
     abstract class OfferCallBuilder extends CallBuilder<OfferRecord> { }
-
+    interface SingleOperationCallBuilder extends OperationCallBuilder {
+        call(): Promise<OperationRecord>;
+    }
     abstract class OperationCallBuilder extends CallBuilder<OperationRecord> {
         forAccount(accountId: string): this;
         forLedger(sequence: string): this;
         forTransaction(transactionId: string): this;
+        operation(operationId: number): SingleOperationCallBuilder;
     }
     abstract class OrderbookCallBuilder extends CallBuilder<OrderbookRecord> { }
     abstract class PathCallBuilder extends CallBuilder<PaymentPathRecord> { }
